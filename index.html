@@ -19,6 +19,42 @@
   --card: rgba(255,255,255,0.65);
 }
 html { scroll-behavior: smooth; }
+::selection { background: rgba(200, 98, 42, 0.18); color: var(--black); }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* OPPORTUNITY BANNER */
+.opportunity-banner {
+  background: var(--black);
+  padding: 0.65rem 5rem;
+  display: flex; justify-content: center;
+}
+.opp-inner {
+  display: flex; align-items: center; gap: 0.85rem;
+  font-size: 0.78rem; color: rgba(255,255,255,0.8);
+  flex-wrap: wrap; justify-content: center;
+}
+.opp-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #6ee87a;
+  box-shadow: 0 0 6px #6ee87a;
+  flex-shrink: 0;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.opp-text strong { color: #fff; }
+.opp-link {
+  color: #e8a07a; font-weight: 600; font-size: 0.75rem;
+  text-decoration: none; border-bottom: 1px solid #e8a07a;
+  padding-bottom: 1px; white-space: nowrap;
+  transition: opacity 0.2s;
+}
+.opp-link:hover { opacity: 0.75; }
 body {
   background-color: var(--bg);
   background-image:
@@ -128,7 +164,7 @@ h1.hero-name .last {
 .hero-meta li:first-child::before { display: none; }
 .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-/* PHOTO — editorial dark portrait card */
+/* PHOTO portrait card */
 .hero-photo {
   border-radius: 14px;
   overflow: hidden;
@@ -145,7 +181,7 @@ h1.hero-name .last {
   display: block;
 }
 
-/* ANIMATED BUTTON — PRIMARY */
+/* ANIMATED BUTTON PRIMARY */
 .btn-anim {
   display: inline-block;
   -webkit-tap-highlight-color: transparent;
@@ -196,7 +232,7 @@ h1.hero-name .last {
 .btn-anim:hover::before { transform: skew(30deg) translateY(100%); }
 .btn-anim:hover::after  { transform: skew(30deg) translateY(-102%); }
 
-/* GHOST BUTTON — fixed */
+/* GHOST BUTTON fixed */
 .btn-anim.ghost {
   background: transparent;
   color: var(--black);
@@ -214,7 +250,11 @@ h1.hero-name .last {
   margin-top: 4rem; overflow: hidden;
   background: var(--card); backdrop-filter: blur(8px);
 }
-.stat-cell { padding: 1.8rem 1.5rem; border-right: 1px solid var(--border); }
+.stat-cell {
+  padding: 1.8rem 1.5rem; border-right: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.stat-cell:hover { background: rgba(255,255,255,0.7); }
 .stat-cell:last-child { border-right: none; }
 .stat-num {
   font-family: 'Playfair Display', serif;
@@ -275,7 +315,12 @@ h2.sec-title em { font-style: italic; color: var(--accent); }
   display: grid; grid-template-columns: 170px 52px 1fr;
   gap: 0 1.5rem; padding: 2.2rem 0;
   border-top: 1px solid var(--border); align-items: start;
+  transition: background 0.2s;
+  border-radius: 4px;
+  margin: 0 -0.5rem;
+  padding-left: 0.5rem; padding-right: 0.5rem;
 }
+.j-entry:hover { background: rgba(255,255,255,0.5); }
 .j-entry:last-child { border-bottom: 1px solid var(--border); }
 .j-meta { font-size: 0.8rem; color: var(--muted); line-height: 1.6; padding-top: 0.2rem; }
 .j-meta strong { display: block; color: var(--black); font-weight: 600; font-size: 0.82rem; }
@@ -310,17 +355,38 @@ h2.sec-title em { font-style: italic; color: var(--accent); }
 .cap-card {
   padding: 1.7rem 1.6rem; background: var(--card); backdrop-filter: blur(6px);
   border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);
-  transition: background 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
+  position: relative;
 }
-.cap-card:hover { background: rgba(255,255,255,0.9); }
+.cap-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 20%; bottom: 20%;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.2s ease;
+}
+.cap-card:hover { background: rgba(255,255,255,0.92); }
+.cap-card:hover::before { width: 3px; }
 .cap-card:nth-child(2n) { border-right: none; }
 .cap-card:nth-last-child(-n+2) { border-bottom: none; }
 .cap-card h3 { font-size: 0.92rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--black); }
 .cap-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
 
 /* PROJECTS */
-.project-card { padding: 2.2rem 0; border-top: 1px solid var(--border); }
+.project-card {
+  padding: 2.2rem 0; border-top: 1px solid var(--border);
+  position: relative; transition: padding-left 0.2s;
+}
 .project-card:last-child { border-bottom: 1px solid var(--border); }
+.project-card::before {
+  content: '';
+  position: absolute; left: -1px; top: 0; bottom: 0;
+  width: 0; background: var(--accent);
+  transition: width 0.2s ease;
+}
+.project-card:hover { padding-left: 1rem; }
+.project-card:hover::before { width: 3px; }
 .project-badges { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem; }
 .project-badge {
   display: inline-block;
@@ -348,9 +414,9 @@ h2.sec-title em { font-style: italic; color: var(--accent); }
 .cred-cell {
   padding: 1.6rem 1.5rem; background: var(--card); backdrop-filter: blur(6px);
   border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
 }
-.cred-cell:hover { background: rgba(255,255,255,0.9); }
+.cred-cell:hover { background: rgba(255,255,255,0.95); transform: translateY(-2px); }
 .cred-cell:nth-child(2n) { border-right: none; }
 .cred-cell:nth-last-child(-n+2) { border-bottom: none; }
 .cred-icon { font-size: 1.3rem; margin-bottom: 0.5rem; }
@@ -374,6 +440,33 @@ h2.sec-title em { font-style: italic; color: var(--accent); }
   color: var(--muted); flex-shrink: 0;
 }
 .about-val { color: var(--black); font-size: 0.82rem; text-align: right; }
+
+/* STORY SECTION */
+.story-block {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.story-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--accent);
+  line-height: 1.45;
+  position: sticky;
+  top: 80px;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  border-left: 3px solid var(--accent);
+}
+.story-body {
+  font-size: 0.93rem;
+  color: var(--muted);
+  line-height: 1.9;
+}
+.story-body p + p { margin-top: 1.2rem; }
+.story-body strong { color: var(--black); font-weight: 600; }
 
 /* CONTACT */
 .contact-row {
@@ -420,6 +513,36 @@ h2.sec-title em { font-style: italic; color: var(--accent); }
 }
 .btn-outline-light:hover { border-color: rgba(255,255,255,0.8); color: #fff; }
 
+/* MINDPRINT TARGETED SECTION */
+.mindprint-section { background: rgba(255,255,255,0.35); border-radius: 16px; padding: 4rem; margin: 0 0 0; }
+.mp-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+.mp-company-tag {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  border: 1px solid var(--accent); color: var(--accent); padding: 0.4rem 1rem; border-radius: 99px;
+  text-decoration: none; transition: background 0.2s, color 0.2s; white-space: nowrap; align-self: flex-start; margin-top: 0.5rem;
+}
+.mp-company-tag:hover { background: var(--accent); color: #fff; }
+.mp-role-banner {
+  background: var(--black); border-radius: 10px;
+  padding: 1.5rem 2rem; display: flex; align-items: center;
+  justify-content: space-between; gap: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap;
+}
+.mp-role-left { display: flex; flex-direction: column; gap: 0.3rem; }
+.mp-role-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; color: #fff; }
+.mp-role-meta { font-size: 0.75rem; color: rgba(255,255,255,0.55); letter-spacing: 0.04em; }
+.mp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.mp-card {
+  padding: 2rem 1.8rem; background: rgba(255,255,255,0.6); backdrop-filter: blur(6px);
+  border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.mp-card:hover { background: rgba(255,255,255,0.95); }
+.mp-card:nth-child(2n) { border-right: none; }
+.mp-card:nth-last-child(-n+2) { border-bottom: none; }
+.mp-card-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--border); line-height: 1; margin-bottom: 0.6rem; }
+.mp-card h3 { font-size: 0.9rem; font-weight: 600; color: var(--black); margin-bottom: 0.5rem; line-height: 1.4; }
+.mp-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.75; }
+
 /* FOOTER */
 footer {
   padding: 2rem 5rem;
@@ -452,6 +575,17 @@ footer {
   .cap-card:last-child, .cred-cell:last-child { border-bottom: none; }
   .cta-band { flex-direction: column; padding: 2rem 1.5rem; text-align: center; }
   .contact-row { flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+  .mindprint-section { padding: 2rem 1.5rem; }
+  .mp-grid { grid-template-columns: 1fr; }
+  .mp-card:nth-child(2n) { border-right: none; }
+  .mp-card { border-right: none; border-bottom: 1px solid var(--border); }
+  .mp-card:last-child { border-bottom: none; }
+  .mp-role-banner { flex-direction: column; align-items: flex-start; }
+  .mp-header { flex-direction: column; }
+  .cap-card:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
+  .cap-card:last-child { border-bottom: none; }
+  .story-block { grid-template-columns: 1fr; gap: 2rem; }
+  .story-quote { position: static; font-size: 1.2rem; }
 }
 </style>
 </head>
@@ -463,6 +597,7 @@ footer {
     <li><a href="#journey">Journey</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#credentials">Credentials</a></li>
+    <li><a href="#story">Story</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -563,7 +698,7 @@ footer {
       <div>
         <div class="j-role">Cofounder</div>
         <div class="j-company">Charlie &nbsp;·&nbsp; AI Recruitment Platform</div>
-        <p class="j-body">Led the concept direction, marketing strategy, and go to market execution for <strong>Charlie</strong>, an AI powered first round interview platform built in 48 hours. <strong>Won the TETR College of Business Hackathon 2026</strong> and received <strong>1,200+ votes in two days</strong> of launch with zero paid promotion. The platform conducts structured voice interviews 24/7, scores candidates across five dimensions, and delivers instant recruiter reports. Operating with 3 pilot organisations including Mechispike and Dhara NGO, with active interest from Daimler Trucks. Priced at $3 per interview at 80% gross margin.</p>
+        <p class="j-body">Led the concept direction, marketing strategy, and go to market execution for <strong>Charlie</strong>, an AI powered first round interview platform built in 48 hours at the TETR College of Business Hackathon 2026. Received <strong>1,200+ votes in two days</strong> with zero paid promotion, placing us among the top competing teams. The platform conducts structured voice interviews 24/7, scores candidates across five dimensions, and delivers instant recruiter reports. Already operating with <strong>3 pilot organisations</strong> including Mechispike and Dhara NGO, with active interest from a senior engineer at Daimler Trucks. Priced at $3 per interview at 80% gross margin.</p>
       </div>
     </div>
 
@@ -589,7 +724,7 @@ footer {
       <div>
         <div class="j-role">Cofounded and Led Influencer Marketing</div>
         <div class="j-company">@TheRashidaDiaries &nbsp;·&nbsp; Lifestyle and Culture Platform</div>
-        <p class="j-body">Grew to <strong>65,000+ followers</strong> with three reels surpassing 1M views each, zero paid promotion. Peak single reel at <strong>6.3M views</strong>. Generated <strong>AED 500,000+ in revenue</strong> through paid brand deals and Trendyol affiliate partnership. Led full operations from lead generation to storytelling to publishing. Brand portfolio includes Burj Khalifa, Burj Al Arab, Atlantis, Ain Dubai, Danube Properties, and 50+ regional names.</p>
+        <p class="j-body">A family lifestyle platform covering UAE and India. Grew to <strong>65,000+ followers</strong> with three reels surpassing 1M views each, zero paid promotion. Peak single reel at <strong>6.3M views</strong>. The platform earns through <strong>sponsored brand collaborations</strong> with venues and lifestyle brands, generating AED 500,000+ across the team. Partners include Burj Khalifa, Burj Al Arab, Atlantis, Ain Dubai, Danube Properties, and 50+ regional names.</p>
       </div>
     </div>
 
@@ -602,7 +737,7 @@ footer {
       <div>
         <div class="j-role">Venture Building Fellow</div>
         <div class="j-company">Gurukul Innovation Lab &nbsp;·&nbsp; National Startup Fellowship</div>
-        <p class="j-body">Completed a <strong>six month structured fellowship</strong> covering ideation to validation to product to growth to scale. Worked directly on problem identification, market sizing, and go to market strategy. Developed frameworks for building ventures from zero to one.</p>
+        <p class="j-body">Completed a <strong>six month structured fellowship</strong> covering ideation, validation, market research, and early-stage product thinking. Explored problem identification and go to market frameworks. A foundational introduction to how startups are built from scratch.</p>
       </div>
     </div>
 
@@ -625,20 +760,28 @@ footer {
     <h2 class="sec-title">Skills that<br><em>actually matter.</em></h2>
     <div class="cap-grid fade-up">
       <div class="cap-card">
-        <h3>Content and Growth</h3>
-        <p>Organic content strategy from zero to 65K followers. Three reels past 1M views. Deep understanding of format, timing, and what drives shares without paid promotion. Five years of performance data across 200+ posts.</p>
+        <h3>Business Development and Outreach</h3>
+        <p>Co-founded @TheRashidaDiaries, a family lifestyle platform behind AED 500K+ in brand collaborations with over 50 UAE brands including Burj Khalifa, Burj Al Arab, and Atlantis. Involved in prospecting, outreach, and the commercial side of partnership deals. Hands-on experience with how brand conversations work from first contact through to published content. Actively learning the full commercial playbook.</p>
       </div>
       <div class="cap-card">
-        <h3>Product Building</h3>
-        <p>Shipped Charlie from concept to live customers in 48 hours. Building MakeMeRevise end to end. Full product lifecycle ownership including concept, design, development, bug fixing, and monetisation without a team.</p>
+        <h3>Startup and Venture Exposure</h3>
+        <p>Completed a six month structured fellowship at Gurukul Innovation Lab covering ideation, validation, and early-stage product thinking. Led the marketing strategy and go to market execution for Charlie, built in 48 hours for the TETR Hackathon 2026. Led the marketing and go to market push that secured the highest vote count across all 26 teams, with 1,200+ votes. Ctill early in the journey and building fast.</p>
       </div>
       <div class="cap-card">
-        <h3>Commercial Execution</h3>
-        <p>Independently negotiated and closed paid brand contracts with the Burj Khalifa and 50+ regional brands. Active Amazon and Trendyol affiliate partner. AED 500K+ generated without an agency. Pilot customers converted for Charlie in 48 hours.</p>
+        <h3>Content, Persuasion and Storytelling</h3>
+        <p>Grew @TheRashidaDiaries from zero to 65K followers with three reels crossing 1M views each, zero paid promotion. Peak reel at 6.3M views. Five years of understanding what makes an audience act, share, and buy. Directly transferable to outbound sales and demo narration for any product.</p>
       </div>
       <div class="cap-card">
-        <h3>Analytics and Reporting</h3>
-        <p>Tracked performance across 200+ posts using Instagram Insights. Proficient in Excel, Power BI, and Microsoft Access. Data informed decision making across every project from content strategy to product development.</p>
+        <h3>Product Building and AI Fluency</h3>
+        <p>Shipped an AI interview platform in 48 hours built in 48 hours for the TETR Hackathon 2026, receiving the highest vote count across 26+ teams with 1,200+ votes. Actively building MakeMeRevise end to end with AI chat, mock exam grading, and dynamic revision roadmaps. Builds AI demos independently from scratch, no engineering team needed.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Cross-Cultural Commercial Range</h3>
+        <p>Active in brand partnerships across Dubai, Sharjah, RAK, and India. Currently building businesses across 7 countries at TETR College of Business. Comfortable operating in different cultural contexts and adapting communication to different rooms, which matters when you are dealing with brands and founders across very different environments.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Analytics, Reporting and Performance Tracking</h3>
+        <p>Tracked and interpreted performance data across 200+ posts using Instagram Insights. Identified high-performing content formats that produced viral outcomes. Proficient in Excel, Power BI, and Microsoft Access. Every commercial decision is backed by numbers, not gut feel.</p>
       </div>
     </div>
   </section>
@@ -653,12 +796,12 @@ footer {
         <span class="project-badge">Early Customers</span>
       </div>
       <div class="project-name">Charlie</div>
-      <p class="project-desc">Charlie is an AI powered first round interview platform built in 48 hours at the TETR College of Business Hackathon 2026, which we won. Share a link, candidates interview instantly with Charlie's adaptive AI voice, and a scored report lands in the recruiter dashboard. No scheduling, no bias, same rigour at candidate 1 and candidate 1,000. Received 1,200+ votes in two days of launch with zero paid promotion. Operating with 3 pilot organisations including Mechispike and Dhara NGO, with active enterprise interest from Daimler Trucks.</p>
+      <p class="project-desc">Charlie is an AI powered first round interview platform built in 48 hours at the TETR College of Business Hackathon 2026. Share a link, candidates interview instantly with Charlie's adaptive AI voice, and a scored report lands in the recruiter dashboard. No scheduling, no bias, same rigour at candidate 1 and candidate 1,000. Received 1,200+ votes in two days with zero paid promotion. Already operating with 3 pilot organisations including Mechispike and Dhara NGO, with active interest from a senior engineer at Daimler Trucks.</p>
       <div class="project-stats">
         <div class="p-stat"><strong>1,200+</strong> votes in 2 days</div>
         <div class="p-stat"><strong>48h</strong> build at TETR Hackathon</div>
         <div class="p-stat"><strong>3</strong> pilot organisations</div>
-        <div class="p-stat"><strong>$3</strong> per interview · 80% gross margin</div>
+        <div class="p-stat"><strong>$3</strong> per interview at 80% margin</div>
       </div>
       <a href="https://charlie-jcsu.onrender.com" target="_blank" rel="noopener" class="btn-anim"><span class="txt-wrap"><span class="txt">Visit Charlie</span></span></a>
     </div>
@@ -710,22 +853,38 @@ footer {
     </div>
   </section>
 
+  <section id="story">
+    <p class="sec-label">What Drives Me</p>
+    <h2 class="sec-title">The more people,<br><em>the more confident.</em></h2>
+
+    <div class="story-block fade-up">
+      <div class="story-quote">
+        "The more the people, the more confident I feel."
+      </div>
+      <div class="story-body">
+        <p>Someone asked me that when I was young. I was representing my school at an event, stepping on stage in front of a crowd, and they asked how I did it without getting nervous. I did not have to think. The answer came straight out: the more the people, the more confident I feel.</p>
+        <p>That answer has stayed with me. Not because it was impressive to say, but because it was genuinely true and I had no idea that was unusual. Large rooms do not shrink me. They focus me. I have been walking into those rooms ever since: school competitions, MUN conferences, standing in front of judges, speaking to rooms of people I have never met. Every single time, that same thing holds.</p>
+        <p>The other thing that shaped how I work has nothing to do with business. At nine years old I memorised 604 pages of the Quran and scored 97%. Nobody made it interesting for me. There was no shortcut and no reward waiting at the end of each session. It was just showing up, repeating, getting corrected, and showing up again. That kind of work taught me what sustained effort on a hard thing actually feels like, years before I ever thought about building anything.</p>
+        <p>Two things I know about myself because of those two experiences: I do not shrink under pressure. And I can do the unglamorous work for as long as it takes.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="about">
     <p class="sec-label">About</p>
     <h2 class="sec-title">The person<br><em>behind it all.</em></h2>
     <div class="about-grid fade-up">
       <div class="about-text">
-        <p>Not many people finishing A Levels have negotiated paid brand contracts with the Burj Khalifa, built software products that landed real paying customers, and been personally acknowledged by the Ruler of Sharjah. None of that was accidental.</p>
-        <p>At nine years old I memorised the entire Quran with a 97% score. That kind of sustained, high stakes focus became the template for everything since. I do not explore ideas. I build them and see them all the way through.</p>
-        <p>Today I am running <strong>@TheRashidaDiaries</strong> at 65K followers and AED 500K+ in revenue. I cofounded <strong>Charlie</strong>, an AI interview platform that went from zero to pilot customers in 48 hours, with Daimler Trucks in the pipeline. I am building <strong>MakeMeRevise.com</strong>, an AI powered revision platform for A Level students.</p>
-        <p>All of this while completing A Levels with three A Stars predicted and studying at TETR College of Business across seven countries simultaneously. The goal has always been the same: execute, do not just explore.</p>
+        <p>Co-founded a family lifestyle platform that grew to 65K followers and generated AED 500K+ in brand collaborations. Involved in the marketing strategy and execution behind Charlie, built in 48 hours for the TETR Hackathon 2026, receiving the highest vote count across 26+ teams with 1,200+ votes. Currently building MakeMeRevise from the ground up. Completing A Levels with three A Stars predicted while doing all of this.</p>
+        <p>Still early. Aware of what I do not know yet. But the habits were built young. Memorising the full Quran at age 9 with a 97% score taught me what sustained effort on hard things actually feels like. That is still how I approach everything.</p>
+        <p>Always looking to be in rooms where I am the least experienced person. Always looking to learn from people who have done what I am trying to do. Open to being corrected, challenged, and pushed.</p>
       </div>
       <ul class="about-list">
         <li><span class="about-key">Based</span><span class="about-val">Sharjah, UAE</span></li>
         <li><span class="about-key">Education</span><span class="about-val">A Levels · TETR 2026</span></li>
         <li><span class="about-key">Languages</span><span class="about-val">English · Hindi · Urdu · Gujarati</span></li>
         <li><span class="about-key">Tools</span><span class="about-val">CapCut Pro · Adobe Photoshop · Power BI</span></li>
-        <li><span class="about-key">Interests</span><span class="about-val">Venture Research · MUN Debating · Public Speaking</span></li>
+        <li><span class="about-key">Learning</span><span class="about-val">Venture Building · Sales · Product · AI</span></li>
         <li><span class="about-key">Email</span><span class="about-val"><a href="mailto:Nuruddinshabbir3@gmail.com" style="color:var(--black);text-decoration:none;">Nuruddinshabbir3@gmail.com</a></span></li>
         <li><span class="about-key">Phone</span><span class="about-val">+971 55 696 1826</span></li>
       </ul>
