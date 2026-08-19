@@ -8,7 +8,7 @@
 <meta name="author" content="Shabbir Jethajiwala"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Shabbir Jethajiwala — AI &amp; Product Builder"/>
-<meta property="og:description" content="Two AI platforms shipped. A 65K audience grown from zero. AED 500K+ in brand revenue. All before finishing A Levels."/>
+<meta property="og:description" content="Two AI platforms, a mobile game with its own analytics stack, a 65K audience grown from zero, and AED 500K+ in brand revenue. All before finishing A Levels."/>
 <meta name="theme-color" content="#c8622a"/>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23c8622a'/%3E%3Ctext x='50' y='50' font-family='Georgia,serif' font-size='52' font-weight='700' fill='%23fff8f0' text-anchor='middle' dominant-baseline='central'%3ESJ%3C/text%3E%3C/svg%3E"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -682,7 +682,7 @@ a:focus-visible, button:focus-visible {
           <span class="last">Jethajiwala.</span>
         </h1>
         <p class="hero-sub">
-          I build AI products end to end and I measure whether they actually work. Two AI platforms shipped, a 65K audience grown from zero, and AED 500K+ in brand revenue, all before finishing A Levels.
+          I build products end to end and I measure whether they actually work. Two AI platforms, a mobile game with its own analytics stack, a 65K audience grown from zero, and AED 500K+ in brand revenue, all before finishing A Levels.
         </p>
         <ul class="hero-meta">
           <li>Sharjah, UAE</li>
@@ -843,11 +843,11 @@ a:focus-visible, button:focus-visible {
     <div class="cap-grid fade-up">
       <div class="cap-card">
         <h3>AI Product Building</h3>
-        <p>Shipped an AI interview platform in 48 hours at the TETR Hackathon 2026, which we <strong>won</strong> with the highest vote count across 26+ teams. Building MakeMeRevise end to end: AI chat assistant with photo upload, mock exams with automated examiner-style marking, AI notes, flashcards, and a dynamically generated revision roadmap. I scope, prototype, and ship AI features myself without waiting on an engineering team.</p>
+        <p>Shipped an AI interview platform in 48 hours at the TETR Hackathon 2026, which we <strong>won</strong> with the highest vote count across 26+ teams. Building MakeMeRevise end to end: AI chat assistant with photo upload, mock exams with automated examiner-style marking, AI notes, flashcards, and a dynamically generated revision roadmap. Also shipped a full mobile game solo in Unity and C#, with real-time multiplayer and its own telemetry backend. I scope, prototype, and ship myself without waiting on an engineering team.</p>
       </div>
       <div class="cap-card">
         <h3>Data, Experimentation and Behavioural Analytics</h3>
-        <p>Ran performance analysis across <strong>200+ posts</strong> to identify which formats produce outlier outcomes, then rebuilt the content strategy around them. Engineered a deliberate three-video breakout that produced 62,700+ views in 72 hours. Comfortable with segmentation, engagement and retention metrics, cohort behaviour, and A/B style iteration. Proficient in Excel, Power BI, and Microsoft Access.</p>
+        <p>Ran performance analysis across <strong>200+ posts</strong> to identify which formats produce outlier outcomes, then rebuilt the content strategy around them. Engineered a deliberate three-video breakout that produced 62,700+ views in 72 hours. Built a full player analytics pipeline for my own game, from the Unity event client through to a Postgres backed dashboard, to measure deaths by cause, time per level, and player drop-off. Comfortable with segmentation, engagement and retention metrics, cohort behaviour, and A/B style iteration. Proficient in Excel, Power BI, and Microsoft Access.</p>
       </div>
       <div class="cap-card">
         <h3>Monetisation and Commercial Partnerships</h3>
@@ -871,6 +871,24 @@ a:focus-visible, button:focus-visible {
   <section id="projects">
     <p class="sec-label">Shipped, Building, Testing</p>
     <h2 class="sec-title">Work with<br><em>numbers attached.</em></h2>
+
+    <div class="project-card fade-up">
+      <div class="project-badges">
+        <span class="project-badge building">Closed Testing</span>
+        <span class="project-badge">Google Play</span>
+        <span class="project-badge">Solo Build</span>
+      </div>
+      <div class="project-name">Trust Issues</div>
+      <p class="project-desc">A gothic rage-platformer for Android and WebGL, built solo in Unity 6: <strong>25,000 lines of C# across 55 scripts and 161 commits in nine weeks</strong>. Forty hand-designed floors, nineteen catalogued trap types, four bosses, and real-time head to head races over Photon. The whole design premise is that the obvious path is the lie, and that every death should teach you exactly one thing.</p>
+      <p class="project-desc">The part I care most about sits underneath the game. I built a <strong>custom player analytics pipeline</strong> end to end because I wanted to know why players quit rather than guess: the Unity client batches gameplay events over HTTPS into a Node and Express server, which writes to Postgres and serves a live dashboard. It tracks deaths by cause, time spent per level, session length, mode popularity, and a <strong>drop-off funnel</strong> showing how far players actually get before they stop. There is deliberately <strong>no monetisation in the build</strong>. The in-game currency is earned by dying and spends on cosmetics only, and I am waiting on real player data before introducing anything beyond that.</p>
+      <div class="project-stats">
+        <div class="p-stat"><strong>25,000+</strong> lines of C# in 9 weeks</div>
+        <div class="p-stat"><strong>Custom</strong> analytics pipeline, Unity to Postgres</div>
+        <div class="p-stat"><strong>Photon</strong> real-time multiplayer</div>
+        <div class="p-stat"><strong>40</strong> floors across 4 worlds</div>
+      </div>
+      <a href="https://play.google.com/apps/testing/com.shabbir.trustissues" target="_blank" rel="noopener" class="btn-anim"><span class="txt-wrap"><span class="txt">Join the Test</span></span></a>
+    </div>
 
     <div class="project-card fade-up">
       <div class="project-badges">
@@ -995,7 +1013,7 @@ a:focus-visible, button:focus-visible {
         <li><span class="about-key">Based</span><span class="about-val">Sharjah, UAE</span></li>
         <li><span class="about-key">Education</span><span class="about-val">A Levels · TETR 2026 to 2030</span></li>
         <li><span class="about-key">Languages</span><span class="about-val">English · Hindi · Urdu · Gujarati</span></li>
-        <li><span class="about-key">Tools</span><span class="about-val">Claude · Higgsfield AI · Power BI · Excel · CapCut Pro</span></li>
+        <li><span class="about-key">Tools</span><span class="about-val">Unity · C# · Node.js · PostgreSQL · Claude · Power BI</span></li>
         <li><span class="about-key">Learning</span><span class="about-val">AI Product · Recommendation Systems · Growth Experimentation</span></li>
         <li><span class="about-key">Email</span><span class="about-val"><a href="mailto:Nuruddinshabbir3@gmail.com" style="color:var(--black);text-decoration:none;">Nuruddinshabbir3@gmail.com</a></span></li>
         <li><span class="about-key">Phone</span><span class="about-val">+971 55 696 1826</span></li>
