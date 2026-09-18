@@ -27,10 +27,10 @@ Current Business Management and Technology Candidate at TETR College of Business
 * **Vox Pop & Interviewing (Tetr Takes Format)**: Shot a VP Capstone campaign video entirely by approaching random teams and interviewing them on their ideas, demonstrating the exact "nerve" needed for Pitch At Tetr.
 * **Community Leadership**: Previously hired by Tetr as an Evangelist to host clubs, lead activities, and onboard the incoming batch, proving strong public speaking skills and community trust.
 
-**@THERASHIDADIARIES | Instagram Lifestyle & Culture Platform**
+**@THERASHIDADIARIES | Instagram Lifestyle Platform (Media Kit: shabbir-nuruddin.github.io/rashidadiaries)**
 *Co-Founder & Influencer Marketing Lead (2020 - present)*
-* **Vertical Content & Audience Retention**: Scaled platform to 80,000+ followers by producing high-performing iPhone-first formats (peak reel hit 6.3M views with zero ad spend).
-* **The "Nerve" & Street Hustle**: I know how to get a "yes." Cold-pitched and closed AED 500,000+ in brand deals with giants like Burj Khalifa. Own the on-ground execution: location scouting, approaching strangers, securing on-camera consent, and pushing past flat answers.
+* **Vertical Content & Audience Retention**: Scaled platform to 80,000+ followers by producing high-performing iPhone-first formats (9.6M+ total views, peak reel hit 6.3M views with zero ad spend).
+* **The "Nerve" & Street Hustle**: I know how to get a "yes." Cold-pitched and closed AED 500,000+ in brand deals with global giants like HONOR, Pampers, GetYourGuide, and Burj Khalifa. Own the on-ground execution: location scouting, approaching strangers, securing on-camera consent, and pushing past flat answers.
 * **End-to-End Production**: Led rapid-turnaround workflows from lead generation and storytelling to shooting, DIT data wrangling, editing, and publishing the final post exactly on schedule.
 
 **ANKETT KEDIA | TikTok Manager**
