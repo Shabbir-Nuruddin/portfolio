@@ -21,6 +21,12 @@ Current Business Management and Technology Candidate at TETR College of Business
 
 ## Experiences
 
+**TETR COLLEGE OF BUSINESS | VP Capstone Candidate & Evangelist**
+*(Sep 2026 - present)*
+* **Street-Level Content Creation**: Within the first two weeks on campus, independently approached local shops to pitch and shoot iPhone-first promotional videos.
+* **Vox Pop & Interviewing (Tetr Takes Format)**: Shot a VP Capstone campaign video entirely by approaching random teams and interviewing them on their ideas, demonstrating the exact "nerve" needed for Pitch At Tetr.
+* **Community Leadership**: Previously hired by Tetr as an Evangelist to host clubs, lead activities, and onboard the incoming batch, proving strong public speaking skills and community trust.
+
 **@THERASHIDADIARIES | Instagram Lifestyle & Culture Platform**
 *Co-Founder & Influencer Marketing Lead (2020 - present)*
 * **Vertical Content & Audience Retention**: Scaled platform to 80,000+ followers by producing high-performing iPhone-first formats (peak reel hit 6.3M views with zero ad spend).
