@@ -9,8 +9,8 @@ Current Business Management and Technology Candidate at TETR College of Business
 *Candidate for Business Management and Technology*
 * Learn by building businesses across 7 countries (Dubai, US, UK, India, Ghana, Argentina, China).
 
-**SCHOLARS INTERNATIONAL ACADEMY (2025 – 2026)**
-* A-Levels (Predicted): 3 A*s — Chemistry, Mathematics, Biology
+**SCHOLARS INTERNATIONAL ACADEMY (2025 - 2026)**
+* A-Levels (Predicted): 3 A*s - Chemistry, Mathematics, Biology
 * AS Levels: 3 As
 * MUN Best Chair (DISEC): Highest distinction for presiding officer out of ~12 chairs; participated in 3+ conferences as delegate.
 
@@ -37,7 +37,7 @@ Current Business Management and Technology Candidate at TETR College of Business
 *TETR Hackathon 2026 Winner (May 2026 - present)*
 * **Hustle & Execution**: Won the TETR College of Business Hackathon 2026, securing the highest vote count across 26+ teams with 1,200+ votes in two days.
 * **Quick Turnaround**: Built the platform in 48 hours and converted 3 pilot organisations (including Mechispike and Dhara NGO) within 48 hours of launch.
-* **Interviewing Logic**: Platform conducts structured AI voice interviews 24/7, scores candidates, and delivers instant reports—mirroring the analytical logic needed to evaluate interview responses.
+* **Interviewing Logic**: Platform conducts structured AI voice interviews 24/7, scores candidates, and delivers instant reports - mirroring the analytical logic needed to evaluate interview responses.
 
 **MakeMeRevise.com | EdTech Platform**
 *Founder & Product Builder (April 2026 - present)*
