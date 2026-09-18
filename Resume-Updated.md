@@ -23,8 +23,8 @@ Current Business Management and Technology Candidate at TETR College of Business
 
 **@THERASHIDADIARIES | Instagram Lifestyle & Culture Platform**
 *Co-Founder & Influencer Marketing Lead (2020 - present)*
-* **Vertical Content & Audience Retention**: Grew platform to 80,000+ followers by producing high-performing iPhone-first formats that produced reels with 1M+ and 6M+ views.
-* **On-Location & Street Hustle**: Drove on-ground execution, including location scouting, negotiating sponsored brand collaborations, and securing on-camera talent across venues like Burj Khalifa, Burj Al Arab, and 50+ regional brands. 
+* **Vertical Content & Audience Retention**: Scaled platform to 80,000+ followers by producing high-performing iPhone-first formats (peak reel hit 6.3M views with zero ad spend).
+* **The "Nerve" & Street Hustle**: I know how to get a "yes." Cold-pitched and closed AED 500,000+ in brand deals with giants like Burj Khalifa. Own the on-ground execution: location scouting, approaching strangers, securing on-camera consent, and pushing past flat answers.
 * **End-to-End Production**: Led rapid-turnaround workflows from lead generation and storytelling to shooting, DIT data wrangling, editing, and publishing the final post exactly on schedule.
 
 **ANKETT KEDIA | TikTok Manager**
