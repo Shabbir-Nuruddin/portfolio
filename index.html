@@ -17,16 +17,16 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --bg: #fff8f0;
+  --bg: #ffffff;
   --white: #ffffff;
-  --black: #1a1604;
-  --accent: #c8622a;
-  --muted: #7a6a5a;
-  --border: #e8ddd4;
-  --card: rgba(255,255,255,0.65);
+  --black: #0f172a;
+  --accent: #10b981;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --card: rgba(248,250,252,0.65);
 }
 html { scroll-behavior: smooth; }
-::selection { background: rgba(200, 98, 42, 0.18); color: var(--black); }
+::selection { background: rgba(16, 185, 129, 0.18); color: var(--black); }
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
@@ -65,9 +65,9 @@ html { scroll-behavior: smooth; }
 body {
   background-color: var(--bg);
   background-image:
-    radial-gradient(circle at 20% 80%, rgba(255,182,153,0.28) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255,244,214,0.45) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(255,182,153,0.10) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(16,185,129,0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(16,185,129,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(148,163,184,0.05) 0%, transparent 50%);
   background-attachment: fixed;
   background-size: cover;
   color: var(--black);
@@ -206,7 +206,7 @@ h1.hero-name .last {
 .hero-photo {
   border-radius: 14px;
   overflow: hidden;
-  background: #7a7470;
+  background: #e2e8f0;
   box-shadow: 0 4px 28px rgba(0,0,0,0.13), 0 1px 6px rgba(0,0,0,0.07);
   height: 580px;
   position: relative;
@@ -738,8 +738,8 @@ a:focus-visible, button:focus-visible {
       
       <div class="hero-photo">
         <picture>
-          <source type="image/avif" srcset="./assets/IMG_1288-DpT4XzIu.avif" />
-          <img src="./assets/IMG_1288-B071P-vC.jpg" width="800" height="1200" alt="Shabbir Jethajiwala" decoding="async" fetchpriority="high"/>
+          <source type="image/avif" srcset="https://github.com/Shabbir-Nuruddin.png" />
+          <img src="https://github.com/Shabbir-Nuruddin.png" width="800" height="1200" alt="Shabbir Jethajiwala" decoding="async" fetchpriority="high"/>
         </picture>
       </div>
     </div>
